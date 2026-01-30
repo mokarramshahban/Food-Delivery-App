@@ -123,6 +123,27 @@ body {
     margin: 20px;
     margin-left: 40px;
 }
+.search-box {
+    display: flex;
+    margin-right: 20px;
+}
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+    outline: none;
+}
+.search-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 .filter-btn{
     padding: 10px 20px;
     background-color: #28a745;
@@ -167,4 +188,11 @@ body {
     100% {
         background-position: 200% 0;
     }
+}
+
+.log-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: #333 solid 1px;
+    border-radius: 5px;
 }
