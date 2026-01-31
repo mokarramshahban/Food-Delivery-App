@@ -16,7 +16,7 @@ const Body = () => {
       "https://corsproxy.io/?url=" + encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.6333946&lng=74.86724269999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"),
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
     // Find the card that actually contains the restaurant data
     const cards = json?.data?.cards || [];
