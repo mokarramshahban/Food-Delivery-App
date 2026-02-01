@@ -1,41 +1,75 @@
-# Food Delivery App (Practice Project)
+# Food Delivery App UI (REACT.JS) 🍔
 
-Small frontend practice project that lists restaurants in card layout. Built with plain React components and CSS for learning UI composition, responsive grid layout, and simple component styling.
+A functional food delivery web application built with **React** that fetches live restaurant data, featuring search, filtering, and client-side routing. This project demonstrates core React concepts including hooks, component composition, routing, and efficient DOM manipulation.
 
-## Features
-- Responsive restaurant card grid
-- Hover effects and simple card interactions
-- Header navigation and footer
-- Filter button UI (placeholder for interaction)
+## 🚀 Features
 
-## Tech
-- React (JSX modules)
-- HTML, CSS (index.css)
-- No opinionated bundler required — works with simple dev server or your preferred React toolchain
+- **Live Data Fetching**: Fetches real-time restaurant data from Swiggy's public API using a CORS proxy.
+- **Search Functionality**: Users can search for restaurants by name dynamically.
+- **Top Rated Filter**: Filter restaurants with a rating of 4.5+ with a single click.
+- **Shimmer UI**: Implements a shimmer loading effect for a better user experience while data is being fetched.
+- **Client-Side Routing**: Single Page Application (SPA) navigation using **React Router v7**.
+    - **Home**: Displays the list of restaurants.
+    - **About**: Project/Author information.
+    - **Contact**: Contact details.
+    - **Error Page**: Custom error handling for invalid routes.
+- **Responsive Design**: Mobile-friendly restaurant card grid layout.
 
-## Quick Start
-1. Clone the repo:
+## 🛠️ Tech Stack
+
+- **React 19**: Component-based UI library.
+- **Parcel**: Zero-configuration build tool/bundler.
+- **React Router**: For handling routing and navigation.
+- **ES6+ JavaScript**: Modern JS features.
+- **CSS3**: Custom styling for layout and components.
+
+## ⚙️ Installation & Running Locally
+
+1. **Clone the repository:**
+   ```bash
    git clone <repository-url>
-
-2. Open the project:
    cd Food-Delivery-App
+   ```
 
-3. Serve the app:
-- Option A — Open directly:
-  - Open `index.html` in your browser (works for simple demos)
-- Option B — Local dev server (recommended):
-  - Use a static server like `live-server`, `http-server`, or your preferred bundler (Parcel/Vite/Create React App).
-  - Example with npx http-server:
-    npx http-server -c-1 .
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-4. If using a bundler, set entry to `index.html` and ensure JSX modules are handled by your tool.
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   This will run the app using Parcel at `http://localhost:1234` (or another available port).
 
-## Project Structure
-- index.html — entry HTML
-- index.css — main styles
-- src/App.jsx — main React entry (loaded as module)
-- README.md — this file
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
+## 📂 Project Structure
 
-## Author
+```
+Food-Delivery-App/
+├── src/
+│   ├── components/
+│   │   ├── About.jsx           # About page component
+│   │   ├── Body.jsx            # Main container with search & list logic
+│   │   ├── Contact.jsx         # Contact page component
+│   │   ├── Error.jsx           # Error page for 404s
+│   │   ├── Footer.jsx          # Site footer
+│   │   ├── Header.jsx          # Navigation header
+│   │   ├── RestaurantCard.jsx  # Individual restaurant display card
+│   │   └── Shimmer.jsx         # Loading state component
+│   ├── utils/
+│   │   └── constants.jsx       # Hardcoded strings/URLs
+│   └── App.jsx                 # Root component & Router config
+├── images/                     # Static assets
+├── index.css                   # Global styles
+├── index.html                  # Entry HTML file
+├── package.json                # Dependencies and scripts
+└── README.md                   # Documentation
+```
+
+## 👨‍💻 Author
 Mokarram Shahban
