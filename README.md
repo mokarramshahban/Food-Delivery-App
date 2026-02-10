@@ -7,11 +7,13 @@ A functional food delivery web application built with **React** that fetches liv
 - **Live Data Fetching**: Fetches real-time restaurant data from Swiggy's public API using a CORS proxy.
 - **Search Functionality**: Users can search for restaurants by name dynamically.
 - **Top Rated Filter**: Filter restaurants with a rating of 4.5+ with a single click.
+- **Dynamic Routing**: View detailed menu for each restaurant.
 - **Shimmer UI**: Implements a shimmer loading effect for a better user experience while data is being fetched.
 - **Client-Side Routing**: Single Page Application (SPA) navigation using **React Router v7**.
     - **Home**: Displays the list of restaurants.
     - **About**: Project/Author information.
     - **Contact**: Contact details.
+    - **Restaurant Menu**: Displays menu items for a specific restaurant.
     - **Error Page**: Custom error handling for invalid routes.
 - **Responsive Design**: Mobile-friendly restaurant card grid layout.
 
@@ -60,6 +62,7 @@ Food-Delivery-App/
 │   │   ├── Footer.jsx          # Site footer
 │   │   ├── Header.jsx          # Navigation header
 │   │   ├── RestaurantCard.jsx  # Individual restaurant display card
+│   │   ├── RestaurantMenu.jsx  # Restaurant menu page
 │   │   └── Shimmer.jsx         # Loading state component
 │   ├── utils/
 │   │   └── constants.jsx       # Hardcoded strings/URLs
@@ -68,7 +71,7 @@ Food-Delivery-App/
 ├── index.css                   # Global styles
 ├── index.html                  # Entry HTML file
 ├── package.json                # Dependencies and scripts
-└── README.md                   # Documentation
+└── ReadMe.md                   # Documentation
 ```
 
 ## 👨‍💻 Author
