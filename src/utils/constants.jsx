@@ -12,3 +12,6 @@ export const RESTAURANT_API =
 
 export const MENU_API =
   "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.6333946&lng=74.86724269999999&restaurantId=";
+
+
+export const GITHUB_USER_API = "https://api.github.com/users/mokarramshahban";

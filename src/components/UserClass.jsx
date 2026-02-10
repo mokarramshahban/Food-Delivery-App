@@ -1,32 +1,37 @@
 import React from "react";
+import { GITHUB_USER_API } from "../utils/constants";
 
 class UserClass extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
     this.state = {
-      count: 0,
+      userInfo: {
+        name: "Dummy Name",
+        location: "Dummy Location",
+        created_at: "Dummy Date",
+
+      },
     };
   }
 
+  async componentDidMount() {
+    const data = await fetch(GITHUB_USER_API);
+    const json = await data.json();
+
+    this.setState({
+      userInfo: json,
+    });
+  }
+
   render() {
-    const { name, designation } = this.props;
-    const { count } = this.state;
+    const { name, created_at, avatar_url } = this.state.userInfo;
     return (
       <div>
-        <p>Developer Details</p>
+        <p>Github Profile</p>
+        <img src={avatar_url} />
         <h1>Name: {name}</h1>
-        <h2>Designation: {designation}</h2>
-        <hr />
-        <h3>Count : {count}</h3>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Click here to add 1
-        </button>
+        <h2>Acc Created at: {created_at}</h2>
       </div>
     );
   }

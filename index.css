@@ -120,6 +120,10 @@ body {
     color: #f8f9fa;
     margin-top: 40px;
 }
+.footer p>strong>a {
+    text-decoration: underline;
+    color: white;
+}
 .filter{
     display: flex;
     justify-content: start;
