@@ -42,8 +42,8 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/developer",
-        element: <Developer />
-      }
+        element: <Developer />,
+      },
     ],
     errorElement: <Error />,
   },

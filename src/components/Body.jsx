@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { RESTAURANT_API } from "../utils/constants";
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [copyResList, setCopyResList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -31,6 +33,12 @@ const Body = () => {
     setCopyResList(restaurants);
   };
 
+  if (onlineStatus === false)
+    return (
+      <h1>
+        It's look like you're offile, Please check your internet connection !!!!
+      </h1>
+    );
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (

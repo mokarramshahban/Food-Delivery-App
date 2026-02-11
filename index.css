@@ -70,6 +70,11 @@ body {
     cursor: pointer;
 }
 
+.res-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .res-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -98,9 +103,6 @@ body {
     font-size: 14px;
     color: #666;
     margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .res-card-details {
