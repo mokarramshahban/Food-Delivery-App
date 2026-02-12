@@ -6,12 +6,12 @@ const Header = () => {
   const [btnName, setBtnName] = useState("login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} alt="Food App Logo" />
+    <div className="flex">
+      <div className="w-60">
+        <img className="w-30" src={LOGO_URL} alt="Food App Logo" />
       </div>
       <div className="nav-items">
-        <ul>
+        <ul className="flex">
           <li>Internet Connection: {onlineStatus ? "🟢" : "🔴"}</li>
           <li> <Link to="/" >Home</Link> </li>
           <li> <Link to="/about" >About Us</Link></li>
