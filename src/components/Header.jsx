@@ -6,20 +6,19 @@ const Header = () => {
   const [btnName, setBtnName] = useState("login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex">
-      <div className="w-60">
-        <img className="w-30" src={LOGO_URL} alt="Food App Logo" />
+    <div className=" h-30 w-full flex bg-orange-100 shadow-lg">
+      <div className="w-[50%]">
+        <img className=" mx-4 w-30" src={LOGO_URL} alt="Food App Logo" />
       </div>
-      <div className="nav-items">
-        <ul className="flex">
-          <li>Internet Connection: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li> <Link to="/" >Home</Link> </li>
-          <li> <Link to="/about" >About Us</Link></li>
-          <li> <Link to="/contact" >Contact Us</Link></li>
-          <li> <Link to="/grocery" >Grocery</Link></li>
-
-          <li>Cart</li>
-          <button className="log-btn"
+      <div className="flex">
+        <ul className="flex items-center justify-between font-medium">
+          <li className="m-4 border py-1 px-3 rounded">Internet Connection: {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="m-4"> <Link to="/" >Home</Link> </li>
+          <li className="m-4"> <Link to="/about" >About Us</Link></li>
+          <li className="m-4"> <Link to="/contact" >Contact Us</Link></li>
+          <li className="m-4"> <Link to="/grocery" >Grocery</Link></li>
+          <li className="m-4">Cart</li>
+          <button className="cursor-pointer border px-3 py-1 rounded-sm hover:bg-amber-50"
             onClick={() =>{
               btnName === "login"
                 ? setBtnName ("logOut")

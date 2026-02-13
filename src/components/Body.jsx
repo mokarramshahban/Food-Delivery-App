@@ -42,11 +42,13 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter">
-        <div className="search-box">
+    <div className="">
+
+
+      <div className="flex m-6">
+        <div className="flex">
           <input
-            className="search-input"
+            className="px-2 border rounded-sm focus:ring focus:ring-amber-300"
             type="text"
             value={searchText}
             onChange={(e) => {
@@ -54,7 +56,7 @@ const Body = () => {
             }}
           />
           <button
-            className="search-btn"
+            className="border rounded-sm mx-2 px-4 py-1 cursor-pointer hover:bg-amber-200"
             onClick={() => {
               let search_filter = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase()),
@@ -66,7 +68,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="filter-btn"
+          className="border rounded-sm mx-2 px-4 py-1 cursor-pointer hover:bg-amber-200"
           onClick={() => {
             let filteredResList = listOfRestaurants.filter(
               (res) => res.info.avgRating >= 4.5,
@@ -77,7 +79,9 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div className="res-container">
+
+
+      <div className="flex flex-wrap m-4">
         {copyResList.map((restaurant) => (
           <Link
             key={restaurant.info.id}

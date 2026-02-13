@@ -17,16 +17,16 @@ const RestaurantCard = (props) => {
   
 
   return (
-    <div className="res-card">
+    <div className="bg-amber-100 w-70 m-2 p-4 rounded-lg hover:bg-amber-50 hover:border">
       <img
-        className="res-logo"
+        className=" rounded"
         src={CDN_URL + cloudinaryImageId}
         alt={name}
       />
       <div className="res-card-content">
-        <h3>{name}</h3>
-        <h4>{cuisines.join(', ')}</h4>
-        <div className="res-card-details">
+        <h3 className="font-bold p-2">{name}</h3>
+        <h4 className="px-2">{cuisines.join(', ')}</h4>
+        <div className="pt-2 px-2 flex justify-between">
           <span>⭐{avgRating}</span>
           <span>{costForTwo}</span>
           <span>{sla?.slaString}</span>
