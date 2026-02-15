@@ -12,7 +12,7 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
 
   const RestaurantOpenCard = isOpenRestaurant(RestaurantCard);
-  console.log(listOfRestaurants);
+  // console.log(listOfRestaurants);
 
   useEffect(() => {
     fetchData();
