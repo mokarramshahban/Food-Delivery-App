@@ -7,7 +7,7 @@ import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
-  const [showIndex, setShowIndex] = useState(0)
+  const [showIndex, setShowIndex] = useState(null);
 
   const resInfo = useRestaurantMenu(resId);
 
@@ -50,7 +50,7 @@ const RestaurantMenu = () => {
           key={category?.card?.card?.categoryId}
           data={category?.card?.card}
           showItems={index === showIndex ? true : false}
-          setShowIndex = { ()=>setShowIndex(index === showIndex ? null : index)}
+          setShowIndex={() => setShowIndex(index === showIndex ? null : index)}
         />
       ))}
     </div>
