@@ -9,8 +9,8 @@ const Header = () => {
   const [btnName, setBtnName] = useState("login");
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
-  const cartItems = useSelector ( (store)=> store.cart.items);
-  console.log(logo)
+  const cartItems = useSelector((store) => store.cart.items);
+
   return (
     <div className=" h-30 w-full flex bg-orange-100 shadow-lg">
       <div className="w-[40%]">
