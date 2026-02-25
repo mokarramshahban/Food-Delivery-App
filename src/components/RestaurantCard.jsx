@@ -2,7 +2,6 @@ import { CDN_URL } from "../utils/constants";
 
 export const RestaurantCard = (props) => {
   const { resData } = props;
-
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     resData.info;
 
@@ -22,11 +21,13 @@ export const RestaurantCard = (props) => {
   );
 };
 
-export const isOpenRestaurant = (RestaurantCard) => {
+export const IsOpenRestaurant = (RestaurantCard) => {
   return (props) => {
     return (
       <div className="border rounded-sm pt-3 m-2 bg-amber-100 mt-10">
-        <label className="ml-3 px-3 py-1 rounded-sm bg-amber-50 text-green-800 border-b-black">Restaurant is now Open</label>
+        <label className="ml-3 px-3 py-1 rounded-sm bg-amber-50 text-green-800 border-b-black">
+          Restaurant is now Open
+        </label>
         <RestaurantCard {...props} />
       </div>
     );

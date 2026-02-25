@@ -1,4 +1,4 @@
-import { RestaurantCard, isOpenRestaurant } from "./RestaurantCard";
+import { RestaurantCard, IsOpenRestaurant } from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { RESTAURANT_API } from "../utils/constants";
@@ -14,7 +14,7 @@ const Body = () => {
 
   const { loggedInUser, setUserName } = useContext(UserContext);
 
-  const RestaurantOpenCard = isOpenRestaurant(RestaurantCard);
+  const RestaurantOpenCard = IsOpenRestaurant(RestaurantCard);
   // console.log(listOfRestaurants);
 
   useEffect(() => {
