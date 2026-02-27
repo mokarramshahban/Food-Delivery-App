@@ -54,6 +54,7 @@ const Body = () => {
           <input
             className="px-2 border rounded-sm focus:ring focus:ring-amber-300"
             type="text"
+            data-testid="searchInput"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);

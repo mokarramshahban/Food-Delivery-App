@@ -6,7 +6,7 @@ export const RestaurantCard = (props) => {
     resData.info;
 
   return (
-    <div className="bg-amber-100 w-70 m-2 p-4 rounded-lg hover:bg-amber-50">
+    <div data-testid="resCard" className="bg-amber-100 w-70 m-2 p-4 rounded-lg hover:bg-amber-50">
       <img className=" rounded" src={CDN_URL + cloudinaryImageId} alt={name} />
       <div className="res-card-content">
         <h3 className="font-bold p-2">{name}</h3>
