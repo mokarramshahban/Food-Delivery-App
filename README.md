@@ -22,6 +22,7 @@ A functional food delivery web application built with **React** that fetches liv
     - **Developer**: Developer profile using Class Components.
     - **Error Page**: Custom error handling for invalid routes.
 - **Responsive Design**: Mobile-friendly restaurant card grid layout.
+- **Testing**: Robust test suite including Unit and Integration tests using **Jest** and **React Testing Library**.
 
 ## 🛠️ Tech Stack
 
@@ -30,6 +31,8 @@ A functional food delivery web application built with **React** that fetches liv
 - **React Router**: For handling routing and navigation.
 - **ES6+ JavaScript**: Modern JS features.
 - **CSS3**: Custom styling for layout and components.
+- **Jest**: JavaScript Testing Framework.
+- **React Testing Library**: For testing React components.
 
 ## ⚙️ Installation & Running Locally
 
@@ -53,6 +56,11 @@ A functional food delivery web application built with **React** that fetches liv
 4. **Build for production:**
    ```bash
    npm run build
+   ```
+
+5. **Run tests:**
+   ```bash
+   npm test
    ```
 
 ## 📂 Project Structure
